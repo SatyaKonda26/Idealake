@@ -1,0 +1,134 @@
+.card_heading {
+  margin: 16px 0 64px;
+}
+
+.offercards {
+  align-items: stretch;
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+.offercards a,
+.offercardsp,
+.offercards .logo {
+  transform: all 0.5s ease-in-out;
+}
+
+.card {
+  width: 23.7%;
+  padding: 40px 60px 40px 40px;
+  align-items: flex-start;
+  box-shadow: 0px 8px 52.8537px rgba(215, 228, 249, 0.5);
+  border-radius: 24px;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 50px;
+  color: #ffa900;
+}
+
+.service {
+  margin: 24px 0 16px;
+}
+
+.card {
+  position: relative;
+}
+
+.card:hover {
+  background-color: #0b4e82;
+}
+
+.card:hover span,
+.card:hover a,
+.card:hover p {
+  color: #fff;
+}
+
+.card::after {
+  padding: 7px 10px;
+  border-radius: 20px;
+  content: "\e92f";
+  font-family: "icomoon";
+  background-color: #fff;
+  color: #0b4e82;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  transform: translateY(50px);
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover::after {
+  transform: translateY(0);
+}
+
+@media only screen and (max-width: 1440px) {
+  .card {
+    width: 31.5%;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .card {
+    width: 31%;
+  }
+
+  .offercards {
+    column-gap: 15px;
+    row-gap: 30px;
+  }
+
+  .logo {
+    font-size: 45px;
+  }
+
+  .service {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .logo {
+    font-size: 43px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 24px;
+  }
+
+  .card::after {
+    display: none;
+  }
+
+  .offercards {
+    row-gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .card_heading {
+    margin: 14px 0 36px;
+  }
+  .logo {
+    font-size: 41px;
+  }
+  .service {
+    font-size: 16px;
+    margin: 16px 0 18px;
+  }
+
+  .card {
+    row-gap: 14px;
+  }
+}

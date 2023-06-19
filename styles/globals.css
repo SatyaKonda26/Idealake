@@ -1,0 +1,425 @@
+@import url("/assets/fonts/fonts.css");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "CenturyGothic-Regular";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "CenturyGothic-Bold";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  transition: all 0.2s ease-in-out;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.inner {
+  padding: 100px 0;
+}
+
+.banner_heading {
+  font-weight: 700;
+  font-size: 72px;
+}
+
+.pageWrapper {
+  padding-top: 10rem; /*991px*/
+}
+
+.banner_para,
+.title,
+.description,
+.btn,
+.card_para1 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.banner_para {
+  font-weight: 400;
+}
+
+.title {
+  font-family: "CenturyGothic-Regular";
+}
+
+.sec_heading {
+  text-align: center;
+}
+
+.heading {
+  margin: 16px 0 24px;
+  font-weight: 700;
+  font-size: 54px;
+  text-transform: capitalize;
+  color: #171717;
+}
+
+.para {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.title,
+.para {
+  color: #585755;
+}
+
+.title1,
+.heading1,
+.heading2,
+.para1,
+.para2 {
+  color: #fff;
+}
+
+.heading1 {
+  margin: 0;
+}
+
+.para1 {
+  margin: 16px 0 36px;
+}
+
+.description {
+  color: #585755;
+}
+
+.btn {
+  width: max-content;
+  margin: 0 auto;
+  padding: 18px 40px;
+  display: block;
+  border: 1px solid #0b4e82;
+  border-radius: 32px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #fff;
+  color: #0b4e82;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn::after {
+  height: 300%;
+  width: 100%;
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  z-index: -1;
+  border-radius: 100%;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0b4e82;
+  color: #fff;
+}
+
+.btn:hover:after {
+  bottom: 100%;
+}
+
+.type1 {
+  background-color: #ffbd3b;
+  color: #000;
+}
+
+.type1::after {
+  background-color: #ffbd3b;
+}
+
+.type1:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.type1:hover:after {
+  background-color: #ffbd3b;
+}
+
+.type2 {
+  padding: 24px;
+  display: inline-block;
+  border-radius: 14px;
+  background-color: #0b4e82;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.card_title {
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.card_title1 {
+  font-size: 24px;
+}
+
+.card_title_black {
+  color: #2d2d2d;
+}
+
+.card_para {
+  font-weight: 400;
+  font-size: 16px;
+  color: #585755;
+}
+
+@media only screen and (max-width: 992px) {
+  .inner {
+    padding: 60px 0;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 12px;
+    border-radius: 20px;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.flex_sb {
+  justify-content: space-between;
+}
+
+.text_left {
+  text-align: left;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* .container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-small,
+.container-xl {
+  width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+} */
+
+.container {
+  width: 100%;
+  max-width: 106.2rem;
+  margin: 0px auto; /*1199px*/ /*991px*/
+}
+
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1002px;
+  }
+
+  .container-small {
+    max-width: 1062px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1202px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1336px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1600px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .para {
+    font-size: 15px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .banner_heading {
+    font-size: 45px;
+  }
+
+  .banner_para {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .heading {
+    font-size: 35px;
+  }
+
+  .para {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 12px;
+    border-radius: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .inner {
+    padding: 60px 0;
+  }
+
+  .title,
+  .btn,
+  .banner_para {
+    font-size: 14px;
+  }
+  .heading {
+    margin: 16px 0;
+    font-size: 28px;
+  }
+
+  .para {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .banner_heading {
+    font-size: 35px;
+  }
+
+  .btn {
+    border-radius: 28px;
+    padding: 9px 37px;
+  }
+
+  .card_title,
+  .card_title1 {
+    font-size: 16px;
+  }
+
+  .card_para1 {
+    font-size: 14px;
+  }
+
+  .card_para {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .description {
+    font-size: 12px;
+  }
+}
+
+#loader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  background-color: #fff;
+  opacity: 1;
+  text-align: center;
+}

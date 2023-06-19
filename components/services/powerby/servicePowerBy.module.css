@@ -1,0 +1,258 @@
+.powered_by {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.powerHeading {
+  margin: 0;
+}
+
+.tab_wrap {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.tab_cont {
+  flex-wrap: wrap;
+}
+
+.tab_inner_cont {
+  margin-right: 28px;
+  padding: 18px 28px;
+  text-align: center;
+  border: 1px solid #eff0f7;
+  background: #ffffff;
+  border-radius: 20px;
+  transition: all 0.3s ease-in;
+}
+
+.tab_inner_cont:last-child {
+  margin-right: 0;
+}
+
+ .tab_inner_cont {
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.tab_inner_cont:hover {
+  box-shadow: 0px 16px 14px rgba(8, 15, 52, 0.08);
+  transition: all 0.4s ease-in;
+  cursor: pointer;
+}
+
+ .icon {
+  color: #0b4e82;
+  font-size: 48px;
+}
+
+.powered_by .tab_wrap .tab_inner_cont p {
+  color: #2d2d2d;
+  font-size: 22px;
+}
+
+.circle_tab_cont {
+  padding: 14px 20px;
+  background: #F2F2F2;;
+  border-radius: 26px;
+}
+
+.circle_tab_cont:hover {
+  background: #0b4e82;
+  box-shadow: 0px 24px 52.8537px rgba(11, 78, 130, 0.2);
+  transition: all 0.4s ease-in;
+}
+
+.circle_tab_cont:hover .circlePara {
+  color: #ffffff;
+  transition: all 0.4s ease-in;
+}
+
+.circleicon {
+  color: #2d2d2d;
+  font-size: 56px;
+}
+
+.circle_tab_cont:hover .circleicon {
+  color: #ffffff;
+  transition: all 0.4s ease-in;
+}
+
+.circlePara {
+  color: #2d2d2d;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.imagecontainer {
+  margin-top: 50px;
+}
+
+.mobImagecontainer {
+  display: none;
+}
+
+.circle_wrap ul li:nth-child(1) {
+  width: 25%;
+}
+
+.circle_wrap ul li:nth-child(2) {
+  width: 50%;
+}
+
+.secondList div:nth-child(1){
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+.circle_wrap ul .firstList .circle_tab_cont:nth-child(2) {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  align-self: flex-start;
+}
+
+.circle_wrap ul li:nth-child(3) {
+  width: 25%;
+}
+
+.circle_wrap ul .thirdList .circle_tab_cont:nth-child(2) {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  align-self: flex-end;
+}
+
+.mobileSecondList{
+  display: none;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1600px) {
+  .circle_wrap ul .firstList .circle_tab_cont:nth-child(2) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-right: 50px;
+  }
+
+  .circle_wrap ul .thirdList .circle_tab_cont:nth-child(2) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 50px;
+  }
+  
+  
+  @media screen and (max-width: 1440px) {
+    .circle_wrap ul .firstList .circle_tab_cont:nth-child(2) {
+      margin-top: 50px;
+      margin-bottom: 50px;
+  
+    }
+    
+    .circle_wrap ul .thirdList .circle_tab_cont:nth-child(2) {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    
+  }
+
+  @media screen and (max-width: 991px) {
+
+
+    .circleicon {
+      color: #2d2d2d;
+      font-size: 40px;
+    }
+  
+    .circlePara {
+      font-size: 16px;
+    }
+
+    .circle_wrap ul .firstList .circle_tab_cont:nth-child(2) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-right: 30px;
+    }
+    
+    .circle_wrap ul .thirdList .circle_tab_cont:nth-child(2) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 30px;
+    }
+  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .circle_wrap ul{
+    gap: 12px;
+  }
+
+  .powerHeading {
+    font-size: 40px;
+  }
+
+  .circle_wrap ul li:nth-child(1) {
+    width: 50%;
+  }
+
+  .circle_wrap ul .firstList .circle_tab_cont:nth-child(2) {
+    margin-right: 0px;
+  }
+  
+  .circle_wrap ul li:nth-child(2) {
+    
+    display: none;
+  }
+  
+  .circle_wrap ul li:nth-child(3) {
+    width: 50%;
+  }
+
+  .circle_wrap ul .thirdList .circle_tab_cont:nth-child(2) {
+    margin-left: 0px;
+  }
+
+  .mobileSecondList{
+    display: block;
+    margin-top: 17px;
+  }
+
+  .imagecontainer {
+    display: none;
+  }
+
+  .mobImagecontainer {
+    display: block;
+  }
+
+  .mobileSecondList > div:nth-child(1){
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .powered_by .tab_cont {
+    justify-content:normal;
+    overflow: auto;
+    width: 100%;
+   flex-wrap: nowrap;
+  }
+
+
+  .powered_by .tab_wrap .tab_inner_cont p {
+    font-size: 18px;
+  }
+
+  .circleicon{
+    font-size: 30px;
+  }
+
+  .circlePara {
+    font-size: 14px;
+  }
+}
+

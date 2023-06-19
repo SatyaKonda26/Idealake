@@ -1,0 +1,140 @@
+.coreLeaders h1 {
+  margin: 0;
+}
+
+.cardMain {
+  gap: 50px;
+  margin: 64px 0 40px;
+}
+
+.imagHolder {
+  position: relative;
+}
+
+.cardImg {
+  margin-bottom: 26px;
+}
+
+.card {
+  overflow: hidden;
+  padding: 16px 16px 0 16px;
+  background: #ffffff;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.06),
+    0px 2px 40px rgba(127, 190, 249, 0.24);
+  border-radius: 24px;
+}
+
+.card:hover .links {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.designation {
+  margin: 10px 0 32px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.links {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #0b4e82;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  bottom: 8px;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+@media only screen and (max-width: 1920px) {
+  .card {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .cardMain {
+    gap: 45px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .cardMain {
+    gap: 35px;
+  }
+  .card {
+    width: 47%;
+    box-shadow: 0px 0.827032px 16.5406px rgba(127, 190, 249, 0.24);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cardMain {
+    gap: 30px;
+  }
+
+  .card {
+    width: 45%;
+    padding: 16px 10px 0 10px;
+  }
+
+  .cardImg {
+    margin-bottom: 16px;
+  }
+
+  .cardMain h3 {
+    font-size: 17px;
+  }
+
+  .cardMain p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .cardMain {
+    gap: 16px;
+  }
+  .card {
+    width: 47.6%;
+    padding: 6px 6px 0 6px;
+    border-radius: 16px;
+  }
+
+  .cardMain h3 {
+    font-size: 14px;
+  }
+
+  .cardMain p {
+    font-size: 10px;
+    margin: 6px 0 16px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .cardMain {
+    gap: 14px;
+  }
+  .card {
+    width: 47.6%;
+    padding: 6px 6px 0 6px;
+    border-radius: 16px;
+  }
+
+  .cardMain h3 {
+    font-size: 14px;
+  }
+
+  .cardMain p {
+    font-size: 10px;
+    margin: 6px 0 16px;
+  }
+}
+
+
