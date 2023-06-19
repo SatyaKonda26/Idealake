@@ -1,5 +1,6 @@
 import Link from "next/link";
 import style from "./servicecards.module.css";
+<<<<<<< HEAD
 // import { servicesData } from "@/src/servicesData";
 export const  servicesData = [
   {
@@ -73,6 +74,9 @@ export const  servicesData = [
       "Bring your brand&apos;s voice to life with clear copy implemented with a robust strategy.",
   },
 ];
+=======
+// import { servicesData } from "../servicesData";
+>>>>>>> 92219ed13edefc80b2eb33f3669cc1e6161cf9bb
 
 export const offerCarddata = [
   {
@@ -147,8 +151,12 @@ export const offerCarddata = [
   },
 ];
 
+<<<<<<< HEAD
 const ServiceCards = ({cardData}) => {
   // console.log("check===>>>",cardData.ServicesIconClass)
+=======
+const ServiceCards = ({ data }) => {
+>>>>>>> 92219ed13edefc80b2eb33f3669cc1e6161cf9bb
   return (
     <section className="inner">
       <div className="container">
@@ -160,6 +168,7 @@ const ServiceCards = ({cardData}) => {
         </div>
 
         <ul className={`flex wrap ${style.offercards}`}>
+<<<<<<< HEAD
           {servicesData &&
             servicesData.map((data, i) => (
               <li key={i} className={`flex ${style.card}`}>
@@ -172,6 +181,20 @@ const ServiceCards = ({cardData}) => {
                     {data.title}
                   </h2>
                   <p className={`card_para`}>{data.details}</p>
+=======
+          {data &&
+            data.map((data, i) => (
+              <li key={i} className={`flex ${style.card}`}>
+                <Link
+                  href={`services/service-detail/${data.Id}`}
+                  title={data.title}
+                >
+                  <span className={`${data.ServicesIconClass} ${style.logo}`} />
+                  <h2 className={`card_title ${style.service}`}>
+                    {data.Title}
+                  </h2>
+                  <p className={`card_para`}>{data.SubTitle}</p>
+>>>>>>> 92219ed13edefc80b2eb33f3669cc1e6161cf9bb
                 </Link>
               </li>
             ))}
