@@ -1,0 +1,171 @@
+.team {
+  padding: 100px 0;
+  text-align: left;
+}
+
+.memberList {
+  margin: 51px 0 59px;
+  column-gap: 20px;
+  overflow: hidden;
+}
+
+.member {
+  width: 33.33%;
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  bottom: -38px;
+  left: 41px;
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  text-align: left;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 28px;
+  color: #fff;
+}
+
+.designation {
+  margin: 12px 0 51px;
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.links {
+  text-decoration: none;
+  font-size: 26px;
+  color: #fff;
+  position: relative;
+}
+
+.links:hover {
+  color: rgb(148, 155, 190);
+}
+
+.links:nth-child(2) {
+  display: inline-block;
+  margin: 0 33.32px;
+}
+
+.member:hover .info {
+  bottom: 40px;
+}
+
+.overlay {
+  background: rgba(11, 78, 130, 0.8);
+  position: absolute;
+  height: 99%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.member:hover .overlay {
+  opacity: 0.9;
+}
+
+.member_btn {
+  width: max-content;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .info {
+    bottom: -50px;
+    left: 30px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1024px) {
+  .info {
+    bottom: -38px;
+    left: 30px;
+  }
+
+  .member_name {
+    font-size: 20px;
+  }
+
+  .designation {
+    font-size: 16px;
+  }
+
+  .links {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .sec_head {
+    text-align: left;
+  }
+
+  .memberList {
+    margin: 50px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .member {
+    width: 48%;
+  }
+}
+
+@media (min-width: 340px) and (max-width: 767px) {
+  .team {
+    padding: 60px 0;
+  }
+  .team h6 {
+    font-size: 18px;
+  }
+
+  .team .content_heading {
+    margin: 16px 0 24px;
+  }
+
+  .team .sub_head {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .team .load_more_btn {
+    padding: 12px 63px;
+  }
+
+  .memberList {
+    margin: 31px 0 21px;
+  }
+
+  .memberList .member {
+    width: 100%;
+  }
+
+  .carousel * {
+    text-align: left;
+  }
+
+  .overlay {
+    height: 100%;
+  }
+
+  .info {
+    left: 45px;
+    bottom: -35px;
+  }
+
+  .designation,
+  .links {
+    font-size: 14px;
+  }
+}

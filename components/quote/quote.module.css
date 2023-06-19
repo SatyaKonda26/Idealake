@@ -1,0 +1,198 @@
+.quote {
+  padding: 180px 0;
+  position: relative;
+  background-color: #28272b;
+  overflow: hidden;
+}
+
+.quote::after,
+.quote::before {
+  height: 16px;
+  width: 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  border-radius: 0 0 30% 30%;
+  background-color: #fff;
+}
+.quote::before {
+  top: 0px;
+}
+
+.quote::after {
+  bottom: 0px;
+  transform: rotate(180deg);
+}
+
+.quotecont {
+  position: relative;
+}
+
+.mainHead {
+  position: inherit;  
+  padding: 77px 158px;
+  background-color: #28272a;
+  box-shadow: 2px 8px 40px rgba(23, 23, 27, 0.5);
+  border-radius: 24px;
+  z-index: 1;
+}
+
+.quotecont::before {
+  content: url("/images/dots.png");
+  position: absolute;
+  top: -3px;
+  left: -55px;
+}
+
+.quotecont::after {
+  content: url("/images/dots.png");
+  position: absolute;
+  bottom: -272px;
+  right: -58px;
+}
+
+.quote h2 {
+  font-size: 64px;
+  color: #ffff;
+}
+
+.quote p {
+  margin-top: 20px;
+  font-size: 32px;
+  color: #ffff;
+}
+
+.head {
+  position: relative;
+}
+
+.quote > div > div > div::before {
+  position: absolute;
+  content: url("/images/ticks.png");
+  /* content: "\e903";
+  font-size: 150PX;
+  background-color: white;
+  color: red; */
+  left: -40px;
+  top: -160px;
+}
+
+@media only screen and (max-width: 1919px) {
+  .quote > div > div > div::before {
+    left: -120px;
+  }
+
+  .quote h2 {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .quote {
+    padding: 150px 0;
+  }
+  .quote > div > div > div::before {
+    left: -82px;
+  }
+  .quote h2 {
+    font-size: 42px;
+  }
+
+  .quote p {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .quote {
+    padding: 120px 0;
+  }
+
+  .mainHead {
+    padding: 60px 90px;
+  }
+  .quote > div > div > div::before {
+    left: -90px;
+  }
+
+  .quote h2 {
+    font-size: 38px;
+  }
+
+  .quote p {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .quotecont::after {
+    right: -30px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .quotecont::after {
+    right: -16px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .quote {
+    padding: 100px 0;
+  }
+
+  .quotecont::after{
+    bottom: -380px;
+  }
+
+  .mainHead {
+    padding: 30px 45px;
+  }
+  .quote > div > div > div::before {
+    content: url("/images/mbticks.png");
+    left: -40px;
+    top: -75px;
+  }
+
+  .quote h2 {
+    font-size: 28px;
+  }
+
+  .quote p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .quote h2 {
+    font-size: 24px;
+  }
+  .quote p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .quote > div > div > div::before {
+    left: -20px;
+    top: -75px;
+  }
+
+  .quotecont::after {
+    right: 0px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .mainHead {
+    padding: 30px 50px;
+  }
+  .quotecont::after {
+    display: none;
+  }
+
+  .quotecont::before {
+    top: -291px;
+    left: -154px;
+  }
+}

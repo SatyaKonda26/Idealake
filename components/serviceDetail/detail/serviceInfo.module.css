@@ -1,0 +1,290 @@
+.service .detail p {
+  line-height: 32px;
+  color: #585755;
+}
+
+.service .expertise p {
+  line-height: 32px;
+  color: #585755;
+}
+
+.info {
+  align-items: start;
+  column-gap: 80px;
+}
+
+.poster {
+  width: 42%;
+}
+
+.heading_mb {
+  display: none;
+  font-size: 28px;
+}
+
+.head {
+  font-weight: 700;
+  font-size: 48px;
+  color: #2d2d2d;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  color: #2d2d2d;
+  margin: 20px 0 35px;
+}
+
+.description {
+  margin-top: 40px;
+}
+
+.description p:nth-child(2) {
+  margin: 18px 0 44px;
+}
+
+.detail {
+  width: 58%;
+}
+
+.expertise {
+  margin: 100px 0 74px;
+}
+
+.card {
+  align-items: flex-start;
+  gap: 87px;
+}
+
+.icons {
+  margin-bottom: 32px;
+  font-size: 80px;
+  color: #0b4e82;
+}
+
+.card_title {
+  margin: 22px 0 8px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #2d2d2d;
+}
+
+.card_para {
+  color: #585755;
+}
+
+@media screen and (max-width: 1919px) {
+  .service .detail p {
+    line-height: 22px;
+  }
+
+  .description {
+    margin-top: 30px;
+  }
+
+  .description p:nth-child(2) {
+    margin: 15px 0 28px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .head {
+    font-size: 40px;
+  }
+  .info {
+    column-gap: 50px;
+  }
+
+  .service .detail p {
+    line-height: 24px;
+  }
+
+  .description {
+    margin: 16px 0;
+  }
+
+  .description p:nth-child(2) {
+    margin: 18px 0;
+  }
+
+  .poster,
+  .detail {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .head {
+    font-size: 30px;
+  }
+
+  .service .detail p {
+    line-height: 20px;
+  }
+
+  .description p:nth-child(2) {
+    margin: 12px 0 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .expertisepara {
+    font-size: 16px;
+  }
+
+  .service .card .cardinner .card_title {
+    font-size: 19px;
+  }
+
+  .card {
+    column-gap: 20px;
+  }
+
+  .card_para {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .info {
+    gap: 50px;
+  }
+
+  .head {
+    font-size: 30px;
+  }
+
+  .description {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .info {
+    align-items: center;
+    gap: 35px;
+  }
+
+  .head {
+    font-size: 26px;
+  }
+
+  .description {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  .description p:nth-child(2) {
+    margin: 8px 0 12px;
+  }
+
+  .card {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .card li {
+    width: 48%;
+  }
+
+  .icons {
+    font-size: 60px;
+  }
+
+  .card_title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .info {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .poster,
+  .detail {
+    width: 100%;
+  }
+
+  .poster {
+    margin: 24px 0 30px;
+  }
+
+  .card li {
+    width: 100%;
+  }
+
+  .head {
+    display: none;
+  }
+
+  .head {
+    font-size: 28px;
+  }
+
+  .service .detail p {
+    line-height: 24px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin: 16px 0;
+  }
+
+  .heading_mb {
+    display: block;
+  }
+
+  .description {
+    margin-top: 0px;
+    margin-bottom: 36px;
+    font-size: 16px;
+  }
+
+  .expertise {
+    margin: 0 0 36px;
+  }
+
+  .head {
+    font-size: 28px;
+  }
+
+  .service .expertise p {
+    line-height: 30px;
+    color: #585755;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card li {
+    display: flex;
+    column-gap: 15px;
+  }
+
+  .card_title {
+    margin: 0 0 4px;
+    font-size: 16px;
+  }
+
+  .icons {
+    font-size: 50px;
+  }
+
+  .card_para {
+    font-size: 14px;
+  }
+}

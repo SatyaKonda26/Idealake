@@ -1,0 +1,211 @@
+.header {
+  padding: 21px 0;
+  background-color: #0b0d17;
+  color: #fff;
+}
+
+.logo span {
+  margin-left: 10px;
+  display: block;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.nav .menu {
+  column-gap: 60px;
+}
+
+.menu li a,
+.menu li a:after,
+.menu li a:before {
+  transition: all 0.5s;
+}
+
+.menu li a {
+  padding-top: 15px;
+  opacity: 0.6;
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+
+.menu li a::before {
+  height: 5px;
+  width: 0%;
+  margin: auto;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+  content: ".";
+  background: #ffa155;
+  color: transparent;
+}
+
+.menu li a:hover {
+  opacity: 1;
+}
+
+.menu li a:hover::before {
+  width: 100%;
+}
+
+.burger {
+  width: 30px;
+  height: 30px;
+  display: none;
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  z-index: 10;
+}
+
+.burger_icon {
+  text-indent: -99999px;
+  float: left;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  transition: ease 0.4s;
+  background-color: #fff;
+}
+
+.burger::before {
+  transform: translate(0, 10px);
+}
+
+.burger::after {
+  transform: translate(0, -10px);
+  box-shadow: 0 10px 0 #fff;
+  color: white;
+}
+
+.burger.active::after {
+  transform: rotate(45deg);
+  box-shadow: none;
+  background-color: #fff;
+}
+
+.burger.active::before {
+  transform: rotate(-45deg);
+  background-color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+  .header {
+    padding: 0;
+  }
+
+  .header .burger {
+    display: block;
+  }
+
+  .header .nav {
+    height: 100%;
+    width: 100%;
+    padding: 40px 0;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    transform: translateY(-100%);
+    transform-origin: top;
+    transition: ease 0.4s;
+    background-color: #000;
+    row-gap: 30px;
+  }
+
+  .header .nav .menu {
+    padding-left: 0;
+    flex-direction: column;
+  }
+
+  .header .menu li {
+    width: 100%;
+    row-gap: 10px;
+    position: relative;
+    text-align: center;
+  }
+
+  .header .menu li a {
+    color: white;
+  }
+
+  .nav .menu {
+    row-gap: 30px;
+  }
+
+  .header .header-links {
+    flex-direction: column;
+  }
+
+  .header .menu li a:hover {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    transition: all 0.2s;
+  }
+
+  .header .nav.active {
+    transform: translateY(0);
+  }
+
+  .menu li a {
+    padding-top: 0;
+    font-size: 16px;
+  }
+
+  .contact_btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .menu li a:hover::before {
+    width: 0;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .nav_flex {
+    justify-content: flex-start;
+    gap: 400px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav_flex {
+    gap: 300px;
+  }
+
+  .leaders {
+    padding: 30px 0;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .nav_flex {
+    gap: 200px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .nav_flex {
+    gap: 100px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .nav_flex {
+    gap: 30px;
+  }
+}

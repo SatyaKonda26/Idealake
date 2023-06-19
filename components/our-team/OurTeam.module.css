@@ -1,0 +1,39 @@
+.about {
+  background: linear-gradient(
+    180deg,
+    #dfebff 0%,
+    rgba(230, 240, 255, 0.7) 27.07%,
+    rgba(227, 235, 246, 0) 94.46%
+  );
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  position: relative;
+  z-index: 1; /*991px*/
+}
+
+.title {
+  color: #171717;
+  font-family: "CenturyGothic-Bold";
+  font-size: 5.4rem;
+  line-height: 7rem;
+  text-transform: capitalize;
+  max-width: 122.7rem;
+  margin: 0 auto 3.2rem; /*767px*/ /*575px*/
+}
+
+.short_cont {
+  color: #585755;
+  max-width: 159.2rem;
+  font-size: 2rem;
+  line-height: 3.2rem; /*767px*/
+}
+
+.founder_name {
+  color: #0b4e82;
+  font-family: "CenturyGothic-Bold";
+}
+
+.top-management {
+  padding-bottom: 7rem;
+  z-index: 1; /*767px*/
+}
