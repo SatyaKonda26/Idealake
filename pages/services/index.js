@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-import React from "react";
+
+import React, { Suspense } from "react";
+import Servicebanner from "../../components/services/banner/ServiceBanner";
 import ServiceCards from "../../components/services/cards/ServiceCards";
 import OurTechnologies from "../../components/services/our-technologies/OurTechnologies";
 import ServicePowerBy from "../../components/services/powerby/ServicePowerBy";
 import ServiceClients from "../../components/services/clients/ServiceClients";
 
 export const getStaticProps = async () => {
-  const management = await fetch(
-=======
-import React, { Suspense } from "react";
-import Servicebanner from "../../components/services/banner/ServiceBanner";
-import ServiceCards from "../../components/services/cards/ServiceCards";
 
-export const getStaticProps = async () => {
   const title = await fetch(
     `https://sitefinityheadlesscmsapi.idealake.com/api/idealake/contentitems?$filter=contains(Title,'Services Header Title')`,
     {
@@ -45,7 +40,6 @@ export const getStaticProps = async () => {
   //////////////////////////
 
   const cardtitle = await fetch(
->>>>>>> 92219ed13edefc80b2eb33f3669cc1e6161cf9bb
     `https://sitefinityheadlesscmsapi.idealake.com/api/idealake/idealakeservices?$expand=*`,
     {
       headers: {
@@ -53,7 +47,19 @@ export const getStaticProps = async () => {
       },
     }
   );
-<<<<<<< HEAD
+  const cardtitleres = await cardtitle.json();
+
+
+
+
+  const management = await fetch(
+    `https://sitefinityheadlesscmsapi.idealake.com/api/idealake/idealakeservices?$expand=*`,
+    {
+      headers: {
+        Authorization: process.env.REACT_APP_API_KEY,
+      },
+    }
+  );
   const managementres = await management.json();
 
   const technologies = await fetch(
@@ -107,11 +113,16 @@ export const getStaticProps = async () => {
   const clientImgDataRes = await clientImgData.json();
 
   return {
-    props: { managementres,technologiesRes,servicePowerbyRes,centerImgRes,powerbySkillsRes,clientImgDataRes },
+    props: { managementres,technologiesRes,servicePowerbyRes,centerImgRes,powerbySkillsRes,clientImgDataRes,titleres, subtitleres, descriptionres, cardtitleres  },
   };
 };
 
-export default function Servises({ managementres,technologiesRes,servicePowerbyRes,centerImgRes,powerbySkillsRes,clientImgDataRes }) {
+export default function Servises({ managementres,technologiesRes,servicePowerbyRes,centerImgRes,powerbySkillsRes,clientImgDataRes,titleres, subtitleres, descriptionres, cardtitleres }) {
+ 
+  const titles = titleres.value[0].Content;
+  const Subtitle = subtitleres.value[0].Content;
+  const description = descriptionres.value[0].Content;
+  const carddesc = cardtitleres.value;
   const cardData = managementres.value[0];
   const technologyData = technologiesRes.value;
   const powerbyData = servicePowerbyRes.value;
@@ -126,40 +137,15 @@ export default function Servises({ managementres,technologiesRes,servicePowerbyR
   // console.log("clientImg==>", clientImg);
   return (
     <>
-      <ServiceCards cardData={cardData} />
+      <Servicebanner
+        title={titles}
+        subtitle={Subtitle}
+        description={description}
+      />
+      <ServiceCards cardData={carddesc} />
       <OurTechnologies technologyData={technologyData} />
       <ServicePowerBy powerbyData={powerbyData} centerImg={centerImg} powerbySkills={powerbySkills}/>
       <ServiceClients clientImg={clientImg}/>
     </>
   );
 }
-=======
-  const cardtitleres = await cardtitle.json();
-  //////////////////////////
-
-  return {
-    props: { titleres, subtitleres, descriptionres, cardtitleres },
-  };
-};
-
-const index = ({ titleres, subtitleres, descriptionres, cardtitleres }) => {
-  const title = titleres.value[0].Content;
-  const Subtitle = subtitleres.value[0].Content;
-  const description = descriptionres.value[0].Content;
-  const carddesc = cardtitleres.value;
-  console.log("dsdsdsdsdsds==>>>", carddesc.value);
-
-  return (
-    <>
-      <Servicebanner
-        title={title}
-        subtitle={Subtitle}
-        description={description}
-      />
-      <ServiceCards data={carddesc} />
-    </>
-  );
-};
-
-export default index;
->>>>>>> 92219ed13edefc80b2eb33f3669cc1e6161cf9bb

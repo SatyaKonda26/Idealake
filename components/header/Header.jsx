@@ -10,11 +10,7 @@ export default function Header() {
   const matches = screenSize.width <= 991;
   const links = [
     { name: "Home", href: "/", title: "Home" },
-<<<<<<< HEAD
     { name: "Service", href: "/services", title: "Service" },
-=======
-    { name: "Service", href: "/#fixme", title: "Service" },
->>>>>>> 92219ed13edefc80b2eb33f3669cc1e6161cf9bb
     { name: "Teams", href: "/team", title: "Portfolio" },
     { name: "Careers", href: "/#fixme", title: "Join" },
     { name: "About us", href: "#fixme", title: "About us" },
@@ -74,3 +70,5 @@ export default function Header() {
     </header>
   );
 }
+
+
