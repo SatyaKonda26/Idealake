@@ -1,0 +1,189 @@
+.jobPost {
+  background: linear-gradient(180deg, #e5efff 0%, rgba(244, 250, 255, 0) 100%);
+}
+
+.goBack {
+  color: #0b4e82;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+
+.goBack:hover {
+  opacity: 1;
+}
+
+.goBack::before {
+  content: "\e92f";
+  font-family: "icomoon";
+  padding-left: 21px;
+  display: inline-block;
+  transform: rotate(180deg);
+  font-size: 12px;
+}
+
+.detail {
+  column-gap: 135px;
+  align-items: flex-start;
+}
+
+.detail h2 {
+  margin: 40px 0 32px;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.detail h3 {
+  margin: 40px 0 16px;
+}
+
+.detail p,
+.require {
+  line-height: 32px;
+}
+
+.exp {
+  color: #0b4e82;
+  font-weight: 700;
+}
+
+.jd,
+.others,
+.buttons {
+  box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+  border-radius: 20px;
+  background: #fff;
+}
+
+.job_head {
+  margin-bottom: 24px;
+}
+
+.hide {
+  display: none;
+}
+
+.jd {
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.required_list {
+  list-style-position: outside;
+  align-items: flex-start;
+}
+
+.require {
+  display: inline-flex;
+}
+
+.require::before {
+  content: "✓";
+  margin-right: 20px;
+  color: #36b37e;
+  font-weight: 700;
+}
+
+.apply {
+  row-gap: 60px;
+}
+
+.apply > div {
+  width: 100%;
+}
+
+.others,
+.buttons {
+  width: 100%;
+  padding: 32px;
+}
+
+.buttons {
+  row-gap: 24px;
+  border-radius: 20px;
+}
+
+.btns {
+  padding: 18px 96.5px;
+  background-color: #fff;
+  color: #0b4e82;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.applyBtn::before,
+.shareBtn::before {
+  margin-right: 32px;
+  font-family: "icomoon";
+  font-size: 20px;
+}
+
+.applyBtn::before {
+  content: "\e901";
+}
+
+.shareBtn::before {
+  content: "\e955";
+}
+
+.postDate {
+  display: block;
+  color: #0b4e82;
+  font-weight: 700;
+}
+
+.others li {
+  line-height: 20px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .detail {
+    column-gap: 70px;
+  }
+
+  .jd,
+  .others,
+  .buttons {
+    padding: 25px;
+  }
+
+  .btns {
+    padding: 18px 50px;
+  }
+
+  .detail h3 {
+    margin-top: 20px;
+  }
+
+  .detail p,
+  .require {
+    line-height: 28px;
+  }
+
+  .applyBtn::before,
+  .shareBtn::before {
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .detail {
+    flex-direction: column-reverse;
+    row-gap: 60px;
+  }
+
+  .detail h3 {
+    margin: 16px 0 10px;
+  }
+
+  .apply {
+    width: 100%;
+    row-gap: 32px;
+  }
+
+  .btns {
+    width: 100%;
+    padding: 12px 65px;
+    justify-content: center;
+  }
+}

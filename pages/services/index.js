@@ -1,6 +1,7 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Servicebanner from "../../components/services/banner/ServiceBanner";
 import ServiceCards from "../../components/services/cards/ServiceCards";
+import Testimonial from "../../components/services/testimonial/Testimonial";
 
 export const getStaticProps = async () => {
   const title = await fetch(
@@ -43,19 +44,44 @@ export const getStaticProps = async () => {
     }
   );
   const cardtitleres = await cardtitle.json();
+
   //////////////////////////
 
+  const data = await fetch(
+    `https://sitefinityheadlesscmsapi.idealake.com/api/idealake/clienttestimonials?$expand=*&$orderby=DateCreated asc`,
+    {
+      headers: {
+        Authorization: process.env.REACT_APP_API_KEY,
+      },
+    }
+  );
+  const testimonialres = await data.json();
+
   return {
-    props: { titleres, subtitleres, descriptionres, cardtitleres },
+    props: {
+      titleres,
+      subtitleres,
+      descriptionres,
+      cardtitleres,
+      testimonialres,
+    },
   };
 };
 
-const index = ({ titleres, subtitleres, descriptionres, cardtitleres }) => {
+const index = ({
+  titleres,
+  subtitleres,
+  descriptionres,
+  cardtitleres,
+  testimonialres,
+}) => {
   const title = titleres.value[0].Content;
   const Subtitle = subtitleres.value[0].Content;
   const description = descriptionres.value[0].Content;
   const carddesc = cardtitleres.value;
-  console.log("dsdsdsdsdsds==>>>", carddesc.value);
+  console.log("dsdsdsdsdsds==>>>", carddesc);
+
+  const data = testimonialres.value;
 
   return (
     <>
@@ -65,6 +91,7 @@ const index = ({ titleres, subtitleres, descriptionres, cardtitleres }) => {
         description={description}
       />
       <ServiceCards data={carddesc} />
+      <Testimonial data={data} />
     </>
   );
 };

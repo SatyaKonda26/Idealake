@@ -1,0 +1,340 @@
+.slider {
+  column-gap: 15px;
+}
+
+#testimonial .carousel-root {
+  position: relative !important;
+}
+
+#testimonial .carousel {
+  position: none !important;
+  overflow: revert !important;
+}
+
+#testimonial .control-arrow {
+  height: 0;
+  width: max-content;
+  padding: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  top: 110% !important;
+}
+
+#testimonial .control-arrow:hover {
+  background: none !important;
+}
+
+#testimonial .carousel .control-prev.control-arrow {
+  left: 70%;
+}
+
+#testimonial .carousel .control-next.control-arrow {
+  left: 75%;
+}
+
+#testimonial .control-prev::before,
+#testimonial .control-next::before {
+  margin: 0 !important;
+  font-size: 25px;
+  font-family: "icomoon";
+  color: #000;
+  transition: all 0.1s ease;
+  border: none !important;
+}
+
+#testimonial .control-prev::before {
+  content: "\e902" !important;
+}
+
+#testimonial .control-next::before {
+  content: "\e932" !important;
+}
+
+#testimonial .thumbs-wrapper {
+  margin: 0;
+  overflow: unset;
+}
+
+#testimonial .thumbs-wrapper button {
+  display: none !important;
+}
+
+#testimonial .thumbs {
+  padding: 0 !important;
+  border: none !important;
+  text-align: center !important;
+  position: unset !important;
+}
+
+#testimonial .thumb {
+  height: 98px !important;
+  width: 98px !important;
+  padding: 15px;
+  margin-right: 0 !important;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  position: absolute;
+}
+
+#testimonial .thumb.selected {
+  height: 136px !important;
+  width: 136px !important;
+  border: none;
+  border-bottom: 4px solid #378bcd;
+}
+
+#testimonial .thumb:nth-child(2n),
+#testimonial .thumb:nth-child(1n) {
+  bottom: 270px !important;
+}
+
+#testimonial .thumb:nth-child(3n),
+#testimonial .thumb:nth-child(4n) {
+  bottom: 130px !important;
+}
+
+#testimonial .thumb:nth-child(5n),
+#testimonial .thumb:nth-child(6n) {
+  bottom: 0 !important;
+}
+
+#testimonial .thumb:nth-child(1n),
+#testimonial .thumb:nth-child(5n) {
+  left: 0 !important;
+}
+
+#testimonial .thumb:nth-child(3n) {
+  left: -5% !important;
+}
+
+#testimonial .thumb:nth-child(2n),
+#testimonial .thumb:nth-child(6n) {
+  left: unset !important;
+  right: 0 !important;
+}
+
+#testimonial .thumb:nth-child(4n) {
+  right: -5% !important;
+}
+
+#testimonial .thumb > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1600px) {
+
+  #testimonial .carousel-root {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #testimonial .thumb {
+    height: 85px !important;
+    width: 85px !important;
+    padding: 12px;
+  }
+
+  #testimonial .thumb.selected {
+    height: 126px !important;
+    width: 126px !important;
+  }
+
+  #testimonial .thumb:nth-child(1n),
+  #testimonial .thumb:nth-child(5n) {
+    left: -10% !important;
+  }
+
+  #testimonial .thumb:nth-child(3n) {
+    left: -13% !important;
+  }
+
+  #testimonial .thumb:nth-child(2n),
+  #testimonial .thumb:nth-child(6n) {
+    left: unset !important;
+    right: -10% !important;
+  }
+
+  #testimonial .thumb:nth-child(4n) {
+    right: -13% !important;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  #testimonial .carousel-root {
+    width: 80%;
+  }
+
+
+  #testimonial .carousel .control-next.control-arrow {
+    left: unset;
+  }
+
+  #testimonial .carousel .control-prev.control-arrow {
+    left: unset;
+    right: 70px !important;
+  }
+
+  #testimonial .thumb {
+    height: 75px !important;
+    width: 75px !important;
+    padding: 10px;
+  }
+
+  #testimonial .thumb.selected {
+    height: 106px !important;
+    width: 106px !important;
+  }
+
+  #testimonial .thumb:nth-child(1n),
+  #testimonial .thumb:nth-child(5n) {
+    left: -16% !important;
+  }
+
+  #testimonial .thumb:nth-child(3n) {
+    left: -20% !important;
+  }
+
+  #testimonial .thumb:nth-child(2n),
+  #testimonial .thumb:nth-child(6n) {
+    left: unset !important;
+    right: -15% !important;
+  }
+
+  #testimonial .thumb:nth-child(4n) {
+    right: -17% !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  #testimonial .thumb {
+    height: 60px !important;
+    width: 60px !important;
+  }
+
+  #testimonial .thumb.selected {
+    height: 80px !important;
+    width: 80px !important;
+  }
+
+  #testimonial .control-prev::before,
+  #testimonial .control-next::before {
+    font-size: 20px;
+  }
+
+  #testimonial .thumb:nth-child(2n),
+  #testimonial .thumb:nth-child(6n) {
+    left: unset !important;
+    right: -16% !important;
+  }
+
+  #testimonial .thumb:nth-child(4n) {
+    right: -19% !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #testimonial .thumb:nth-child(1n),
+  #testimonial .thumb:nth-child(5n) {
+    left: -12% !important;
+  }
+
+  #testimonial .thumb:nth-child(3n) {
+    left: -15% !important;
+  }
+
+  #testimonial .thumb:nth-child(2n),
+  #testimonial .thumb:nth-child(6n) {
+    left: unset !important;
+    right: -12% !important;
+  }
+
+  #testimonial .thumb:nth-child(4n) {
+    right: -15% !important;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #testimonial {
+    padding-bottom: 150px;
+  }
+
+
+  #testimonial .carousel-root {
+    position: relative !important;
+  }
+
+  #testimonial .carousel {
+    position: none !important;
+    overflow: revert !important;
+  }
+
+  #testimonial .thumbs {
+    position: relative !important;
+    bottom: -70px !important;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  #testimonial .thumb {
+    height: 60px !important;
+    width: 60px !important;
+    padding: 10px;
+    margin-right: 0 !important;
+    position: relative;
+  }
+
+  #testimonial .thumb.selected {
+    height: 80px !important;
+    width: 80px !important;
+  }
+
+  #testimonial .thumb:nth-child(1n),
+  #testimonial .thumb:nth-child(5n) {
+    left: 0 !important;
+    bottom: 0 !important;
+  }
+
+  #testimonial .thumb:nth-child(3n) {
+    left: 0 !important;
+    bottom: 0 !important;
+  }
+
+  #testimonial .thumb:nth-child(2n),
+  #testimonial .thumb:nth-child(6n) {
+    left: unset !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+
+  #testimonial .thumb:nth-child(4n) {
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+
+  #testimonial .control-prev::before,
+  #testimonial .control-next::before {
+    font-size: 18px !important;
+  }
+
+  #testimonial .carousel .control-prev.control-arrow {
+    left: unset !important;
+    right: 50px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #testimonial .carousel-root {
+    width: 100%;
+  }
+}
+
+
+
+

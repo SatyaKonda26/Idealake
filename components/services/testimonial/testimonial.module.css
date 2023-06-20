@@ -1,0 +1,151 @@
+.testimonial {
+  background: linear-gradient(
+    180deg,
+    rgba(236, 240, 253, 0) 0%,
+    rgba(236, 240, 253, 0.53) 14.32%,
+    #ecf0fd 45.83%,
+    rgba(236, 240, 253, 0.43) 84.33%,
+    rgba(236, 240, 253, 0) 100%
+  );
+}
+
+.testimonial .sec_heading h3 {
+  margin: 0 0 80px;
+}
+
+.person span {
+  display: block;
+}
+
+.card {
+  max-width: 922px;
+  margin: 0 auto;
+  padding: 84px 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+  background-color: #fff;
+}
+
+.feedback {
+  margin-bottom: 113px;
+  position: relative;
+  z-index: 1;
+}
+
+.feedback::before {
+  position: absolute;
+  top: -65%;
+  left: 50%;
+  z-index: -1;
+  transform: translateX(-50%);
+  font-size: 70px;
+  color: #EDF0FD;
+}
+
+.person_info {
+  column-gap: 20px;
+}
+
+.person {
+  align-items: flex-start;
+  row-gap: 10px;
+}
+
+.person h3 {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+@media only screen and (max-width: 1600px) {
+  .testimonial .sec_heading h3 {
+    font-size: 52px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .testimonial .sec_heading h3 {
+    font-size: 42px;
+  }
+
+  .card {
+    max-width: unset;
+    padding: 40px;
+  }
+
+  .feedback::before{
+    top: -40%;
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .person h3 {
+    font-size: 22px;
+  }
+
+  .person span {
+    font-size: 18px;
+  }
+
+  .feedback {
+    margin-bottom: 60px;
+  }
+
+  .feedback::before{
+    top: -30%;
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .card {
+    padding: 40px;
+  }
+
+  .feedback {
+    margin-bottom: 30px;
+  }
+
+  .person h3 {
+    font-size: 16px;
+  }
+
+  .person span {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .person_info {
+    column-gap: 8px;
+  }
+
+  .person h3 {
+    font-size: 14px;
+  }
+
+  .person span {
+    font-size: 10px;
+  }
+
+  .feedback::before{
+    top: -45%;
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .feedback::before{
+    top: -30%;
+    font-size: 40px;
+  }
+
+}
+
+@media only screen and (max-width: 360px) {
+  .feedback::before{
+    top: -25%;
+    font-size: 40px;
+  }
+
+}
