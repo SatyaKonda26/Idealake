@@ -52,36 +52,14 @@ export const getStaticProps = async (context) => {
   const res = await data.json();
   const servicedataID = res.value.filter((val) => val.Id === id);
 
-  const serviceInfoData = await fetch(
-    `https://sitefinityheadlesscmsapi.idealake.com/api/idealake/idealakeservices?$expand=*`,
-    {
-      headers: {
-        Authorization: process.env.REACT_APP_API_KEY,
-      },
-    }
-  );
-  const serviceInfoRes = await serviceInfoData.json();
-
-
-
-
   return {
-    props: { servicedataID,serviceInfoRes },
+    props: { servicedataID },
   };
-
-
-
-  
 };
 
 const Page = (props) => {
   const data = props.servicedataID[0];
-  // console.log("dynamic route", data);
-  const { Title, ServicesParaDescription, ServicesIconClass } =data;
-  // const serviceInfodata=props.serviceInfoRes.value;
-  // console.log("title", props.servicesDataID[0]);
-  // console.log("details", details);
-  // console.log("icon", icon);
+  const { Title, ServicesParaDescription, ServicesIconClass } = data;
 
   return (
     <>
@@ -90,7 +68,7 @@ const Page = (props) => {
         title={Title}
         details={ServicesParaDescription}
       />
-      <ServiceDetailDesc data={data}  />
+      <ServiceDetailDesc data={data} />
     </>
   );
 };
