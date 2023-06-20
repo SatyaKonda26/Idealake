@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useWindowSize from "@/src/hooks/useWindowSize";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 export default function Counter(props) {
   const [count, setCount] = useState("0");

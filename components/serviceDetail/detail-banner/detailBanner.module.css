@@ -1,6 +1,6 @@
 .banner {
   width: 100%;
-  background-image: url("/images/bannerBgImg.png");
+  background-image: url("../../../public/assets/images/bgImg.png");
   background-repeat: no-repeat;
   padding: 92px 0 92px 0;
 }
@@ -31,14 +31,13 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .banner {
     padding: 40px 0;
     background-size: cover;
   }
 
-  .icon{
+  .icon {
     font-size: 70px;
   }
 

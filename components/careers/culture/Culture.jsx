@@ -10,42 +10,42 @@ import style from "./culture.module.css";
 const cultureData = [
   {
     id: 1,
-    icon: Healthcare,
+    // icon: Healthcare,
     name: "Healthcare",
     description:
       "Through True Rich Attended does no end it chis mother since real had halfdoes no end it",
   },
   {
     id: 2,
-    icon: work,
+    // icon: work,
     name: "Hybrid work",
     description:
       "Through True Rich Attended does no end it his mother since real had halfdoes no end it",
   },
   {
     id: 3,
-    icon: performance,
+    // icon: performance,
     name: "Performance evaluations",
     description:
       "Through True Rich Attended does no end it his mother since real had halfdoes no end it",
   },
   {
     id: 4,
-    icon: mentorship,
+    // icon: mentorship,
     name: "Mentorship",
     description:
       "Through True Rich Attended does no end it his mother since real had halfdoes no end it",
   },
   {
     id: 5,
-    icon: training,
+    // icon: training,
     name: "Training & certification",
     description:
       "Through True Rich Attended does no end it his mother since real had halfdoes no end it",
   },
   {
     id: 6,
-    icon: event,
+    // icon: event,
     name: "Festivals & Events",
     description:
       "Through True Rich Attended does no end it his mother since real had halfdoes no end it",

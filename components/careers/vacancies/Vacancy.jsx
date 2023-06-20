@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useState } from "react";
-import { vacancies } from "@/src/vacancies";
+
 import style from "./vacancy.module.css";
+import { vacancies } from "../../../vacancies";
 
 export default function Vacancy() {
   const departments = [
@@ -54,7 +55,8 @@ export default function Vacancy() {
                     <li key={i} className={` ${style.jobs}`}>
                       <Link
                         href={`/careers/career-details/${vacancy.id}`}
-                        className={`flex flex_sb }`} title="Job Vacancy"
+                        className={`flex flex_sb }`}
+                        title="Job Vacancy"
                       >
                         <div>
                           <h3>{vacancy.position}</h3>

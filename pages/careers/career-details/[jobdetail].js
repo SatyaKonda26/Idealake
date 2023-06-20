@@ -1,6 +1,5 @@
-
-import JobPost from "@/src/components/careers/jobPost/JobPost";
-import { vacancies } from "@/src/vacancies";
+import JobPost from "../../../components/careers/jobPost/JobPost";
+import { vacancies } from "../../../vacancies";
 
 export const getStaticPaths = () => {
   const paths = vacancies.map((curElm) => {

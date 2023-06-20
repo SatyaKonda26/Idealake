@@ -1,6 +1,6 @@
-import useWindowSize from "@/src/hooks/useWindowSize";
 import Link from "next/link";
 import style from "./jobPost.module.css";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 export default function JobPost({ data }) {
   const {
@@ -36,18 +36,18 @@ export default function JobPost({ data }) {
               <p className="description">{responsibilities}</p>
               <h3>Who We Are</h3>
               <p className="description">
-                We&apos;re a team of lifelong learners. We&apos;re equal parts left and
-                right brained. And we&apos;re generally likeable. We won&apos;t bore you
-                with more adjectives. See for yourself.
+                We&apos;re a team of lifelong learners. We&apos;re equal parts
+                left and right brained. And we&apos;re generally likeable. We
+                won&apos;t bore you with more adjectives. See for yourself.
               </p>
               <h3>Working with us</h3>
               <p className="description">
-                We&apos;re a global team with a philosophy of encouraging passionate
-                people to be fun and creative. With offices in Melbourne,
-                Oakland, and Berlin we benefit from bringing together the
-                experiences and viewpoints of a wide range of talented people
-                from around the world. We believe a diverse workplace is a
-                healthy workplace.
+                We&apos;re a global team with a philosophy of encouraging
+                passionate people to be fun and creative. With offices in
+                Melbourne, Oakland, and Berlin we benefit from bringing together
+                the experiences and viewpoints of a wide range of talented
+                people from around the world. We believe a diverse workplace is
+                a healthy workplace.
               </p>
               <h3>About the role</h3>
               <ul className={`flex column ${style.required_list}`}>
