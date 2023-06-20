@@ -7,6 +7,17 @@ import ServiceClients from "../../components/services/clients/ServiceClients";
 import Testimonial from "../../components/services/testimonial/Testimonial";
 
 export const getStaticProps = async () => {
+  const servicebanner = await fetch(
+    `https://sitefinityheadlesscmsapi.idealake.com/api/idealake/images?$filter=contains(Title,'service-banner')`,
+    {
+      headers: {
+        Authorization: process.env.REACT_APP_API_KEY,
+      },
+    }
+  );
+
+  const bannerimgres = await servicebanner.json();
+
   const title = await fetch(
     `https://sitefinityheadlesscmsapi.idealake.com/api/idealake/contentitems?$filter=contains(Title,'Services Header Title')`,
     {
@@ -144,6 +155,7 @@ export const getStaticProps = async () => {
       descriptionres,
       cardtitleres,
       testimonialres,
+      bannerimgres,
     },
   };
 };
@@ -159,6 +171,7 @@ const index = ({
   centerImgRes,
   powerbySkillsRes,
   clientImgDataRes,
+  bannerimgres,
 }) => {
   const title = titleres.value[0].Content;
   const Subtitle = subtitleres.value[0].Content;
@@ -174,7 +187,8 @@ const index = ({
   const powerbySkills = powerbySkillsRes.value;
 
   const clientImg = clientImgDataRes.value;
-  // console.log("dsdsdsdsdsds==>>>", carddesc.value);
+
+  const bannerImg = bannerimgres.value[0].Url;
 
   return (
     <>
@@ -182,6 +196,7 @@ const index = ({
         title={title}
         subtitle={Subtitle}
         description={description}
+        bannerImg={bannerImg}
       />
       <ServiceCards data={carddesc} />
       <OurTechnologies technologyData={technologyData} />

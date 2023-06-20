@@ -4,7 +4,7 @@ import banner from "../../../public/assets/images/servicebanner.png";
 import banner2 from "../../../public/assets/images/bannerimg2.png";
 import style from "./servicebanner.module.css";
 
-const Servicebanner = ({ title, subtitle, description }) => {
+const Servicebanner = ({ title, subtitle, description, bannerImg }) => {
   return (
     <section className={`flex ${style.banner}`}>
       <div className={`${style.col}`}>
@@ -13,7 +13,13 @@ const Servicebanner = ({ title, subtitle, description }) => {
           className={`banner_heading ${style.heading}`}
           dangerouslySetInnerHTML={{ __html: subtitle }}
         ></h1>
-        <Image src={banner2} alt="banner_img" className={style.banner_img2} />
+        <Image
+          src={bannerImg}
+          alt="banner_img"
+          className={style.banner_img2}
+          width={150}
+          height={150}
+        />
         <p className={`banner_para  ${style.ban_para}`}>{description}</p>
         <Link href={"/contact"} className={`btn ${style.contact}`}>
           Contact Us
@@ -23,9 +29,11 @@ const Servicebanner = ({ title, subtitle, description }) => {
         <div>
           <Image
             priority={true}
-            src={banner}
+            src={bannerImg}
             alt="banner_img"
             className={style.banner_img}
+            width={150}
+            height={150}
           />
         </div>
       </div>

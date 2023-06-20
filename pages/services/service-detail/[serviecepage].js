@@ -27,17 +27,6 @@ export const getStaticPaths = async () => {
   };
 };
 
-// export const getStaticPaths = (context) => {
-//   const id = context.params.serviecepage;
-//   console.log("dsfdfgdgdfg ==>", id);
-//   const servicesDataID = servicesData.filter((service) => service.id == id);
-//   console.log("servicesDataID", servicesDataID);
-
-//   return {
-//     props: { servicesDataID },
-//   };
-// };
-
 export const getStaticProps = async (context) => {
   const id = context.params.serviecepage;
   const data = await fetch(
@@ -60,7 +49,7 @@ const Page = (props) => {
   debugger;
   const data = props.servicedataID[0];
   // console.log("dynamic route", data);
-  const { Title, ServicesParaDescription, ServicesIconClass } =data;
+  const { Title, ServicesParaDescription, ServicesIconClass } = data;
   // console.log("title", props.servicesDataID[0]);
   // console.log("details", details);
   // console.log("icon", icon);
