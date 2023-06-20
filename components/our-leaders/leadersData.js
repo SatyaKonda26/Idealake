@@ -10,6 +10,7 @@ import chaitali from "/public/assets/images/chaitali_group.png";
 // import monica_mob from "/public/images/monica_mob.png";
 // import ishaq_mob from "/public/images/ishaq_mob.png";
 
+
 export const leadersData = [
   {
     name: "Viraj Savant",
@@ -91,3 +92,5 @@ export const leadersData = [
     linkedIn: "https://www.linkedin.com/in/ishaqticklye/",
   },
 ];
+
+

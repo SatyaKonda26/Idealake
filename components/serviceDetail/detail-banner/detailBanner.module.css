@@ -31,14 +31,13 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .banner {
     padding: 40px 0;
     background-size: cover;
   }
 
-  .icon{
+  .icon {
     font-size: 70px;
   }
 

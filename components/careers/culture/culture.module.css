@@ -1,0 +1,80 @@
+.culture_cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  column-gap: 20px;
+  row-gap: 40px;
+  margin: 64px 0 100px;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px;
+  gap: 16px;
+  background: #ffffff;
+  box-shadow: 0px 18px 52.8537px rgba(215, 228, 249, 0.5);
+  border-radius: 20px;
+  width: 32%;
+}
+
+.icon {
+  width: 48px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.para {
+  color: #585755;
+}
+
+@media only screen and (max-width: 1920px) {
+  .culture_mobile_txt {
+    display: none;
+  }
+  .culture_head {
+    display: none;
+  }
+  .culture_mobile_title {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .card {
+    width: 31%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 10.4348px;
+  }
+
+  .icon {
+    width: 32px;
+  }
+  .culture_mobile_txt {
+    display: block;
+  }
+  .culture_para {
+    display: none;
+  }
+  .culture_head {
+    display: block;
+  }
+  .culture_title {
+    display: none;
+  }
+
+  .culture_mobile_title {
+    display: block;
+  }
+}
