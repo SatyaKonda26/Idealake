@@ -1,5 +1,4 @@
-
-import React, { Suspense } from "react";
+import React, { Children, Suspense } from "react";
 import Servicebanner from "../../components/services/banner/ServiceBanner";
 import ServiceCards from "../../components/services/cards/ServiceCards";
 import OurTechnologies from "../../components/services/our-technologies/OurTechnologies";
@@ -7,7 +6,6 @@ import ServicePowerBy from "../../components/services/powerby/ServicePowerBy";
 import ServiceClients from "../../components/services/clients/ServiceClients";
 
 export const getStaticProps = async () => {
-
   const title = await fetch(
     `https://sitefinityheadlesscmsapi.idealake.com/api/idealake/contentitems?$filter=contains(Title,'Services Header Title')`,
     {
@@ -49,8 +47,7 @@ export const getStaticProps = async () => {
   );
   const cardtitleres = await cardtitle.json();
 
-
-
+  console.log("check===?>", cardtitle);
 
   const management = await fetch(
     `https://sitefinityheadlesscmsapi.idealake.com/api/idealake/idealakeservices?$expand=*`,
@@ -113,17 +110,39 @@ export const getStaticProps = async () => {
   const clientImgDataRes = await clientImgData.json();
 
   return {
-    props: { managementres,technologiesRes,servicePowerbyRes,centerImgRes,powerbySkillsRes,clientImgDataRes,titleres, subtitleres, descriptionres, cardtitleres  },
+    props: {
+      managementres,
+      technologiesRes,
+      servicePowerbyRes,
+      centerImgRes,
+      powerbySkillsRes,
+      clientImgDataRes,
+      titleres,
+      subtitleres,
+      descriptionres,
+      cardtitleres,
+    },
   };
 };
 
-export default function Servises({ managementres,technologiesRes,servicePowerbyRes,centerImgRes,powerbySkillsRes,clientImgDataRes,titleres, subtitleres, descriptionres, cardtitleres }) {
- 
+export default function Servises({
+  managementres,
+  technologiesRes,
+  servicePowerbyRes,
+  centerImgRes,
+  powerbySkillsRes,
+  clientImgDataRes,
+  titleres,
+  subtitleres,
+  descriptionres,
+  cardtitleres,
+}) {
   const titles = titleres.value[0].Content;
   const Subtitle = subtitleres.value[0].Content;
   const description = descriptionres.value[0].Content;
   const carddesc = cardtitleres.value;
-  const cardData = managementres.value[0];
+
+  // const cardData = managementres.value[0];
   const technologyData = technologiesRes.value;
   const powerbyData = servicePowerbyRes.value;
   const centerImg = centerImgRes.value[0].Url;
@@ -144,8 +163,12 @@ export default function Servises({ managementres,technologiesRes,servicePowerbyR
       />
       <ServiceCards cardData={carddesc} />
       <OurTechnologies technologyData={technologyData} />
-      <ServicePowerBy powerbyData={powerbyData} centerImg={centerImg} powerbySkills={powerbySkills}/>
-      <ServiceClients clientImg={clientImg}/>
+      <ServicePowerBy
+        powerbyData={powerbyData}
+        centerImg={centerImg}
+        powerbySkills={powerbySkills}
+      />
+      <ServiceClients clientImg={clientImg} />
     </>
   );
 }
