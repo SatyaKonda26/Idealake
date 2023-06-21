@@ -88,7 +88,6 @@ export const LeaderCard = (props) => {
 };
 
 export default function CoreLeaders({ rec }) {
-  // console.log("rec ==>", rec);
   return (
     <section className={`inner ${style.coreLeaders}`}>
       <div className="container">

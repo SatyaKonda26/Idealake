@@ -27,6 +27,7 @@ export const getStaticPaths = async () => {
   };
 };
 
+
 export const getStaticProps = async (context) => {
   const id = context.params.serviecepage;
   const data = await fetch(

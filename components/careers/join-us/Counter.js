@@ -7,7 +7,6 @@ export default function Counter(props) {
 
   const { number } = props;
   const { width } = useWindowSize();
-  // console.log("width ==>", width);
 
   useEffect(() => {
     let num;

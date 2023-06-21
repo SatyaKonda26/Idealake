@@ -3,7 +3,6 @@ import style from "./serviceInfo.module.css";
 
 
 export default function ServiceInfo({data}) {
-  console.log("data checkx====>",data)
   return (
     <section className={`inner ${style.service}`}>
       <div className="container">

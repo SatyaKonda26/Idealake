@@ -5,7 +5,6 @@ import article from "/public/assets/images/article.png";
 import style from "./blog.module.css";
 
 export default function Blog({ data }) {
-  // console.log(,data)
   const content = [
     {
       imgPath: img_one,

@@ -11,7 +11,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import style from "./testimonial.module.css";
 
 export default function Testimonial({ data }) {
-  // console.log("data from testimonials ==>", data);
   const testimonials = [
     {
       name: "Arvind Kumar",
