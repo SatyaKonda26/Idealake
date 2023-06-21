@@ -164,7 +164,6 @@ const index = ({
   const Subtitle = subtitleres.value[0].Content;
   const description = descriptionres.value[0].Content;
   const carddesc = cardtitleres.value;
-  console.log("cardadarta", carddesc);
   const technologyData = technologiesRes.value;
 
   const powerbyData = servicePowerbyRes.value;
@@ -174,7 +173,6 @@ const index = ({
   const powerbySkills = powerbySkillsRes.value;
 
   const clientImg = clientImgDataRes.value;
-  // console.log("dsdsdsdsdsds==>>>", carddesc.value);
 
   return (
     <>

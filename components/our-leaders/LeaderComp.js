@@ -57,12 +57,10 @@ const LeaderComp = ({ rec }) => {
   let name = rec.Name.split(" ");
   let classname = name[0].toLowerCase();
 
-  // console.log(matches ? "mobile" : "pc");
   return (
     <div className={style.leader_section}>
       <div className={style.leader_image_container}>
         <Image
-          // src={matches ? rec.mobimage : rec.image}
           src={rec.ProfileImage[0].Url}
           alt="leader_img"
           className={style.leader_img}

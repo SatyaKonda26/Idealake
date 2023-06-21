@@ -3,7 +3,6 @@ import style from "./Founder.module.css";
 import LeaderComp from "./LeaderComp";
 
 const Founder = ({ val, title, sub }) => {
-  // console.log("data ===>", val);
   return (
     <section className={style.founders}>
       <div className="container">

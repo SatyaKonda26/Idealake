@@ -41,7 +41,6 @@ import style from "./serviceClients.module.css";
 // ];
 
 export default function ServiceClients({ clientImg }) {
-  // console.log("clientImg=====", clientImg);
   const clientData = [
     { items: [clientImg[0]] },
     { items: [clientImg[1], clientImg[2]] },
@@ -55,7 +54,6 @@ export default function ServiceClients({ clientImg }) {
     { items: [clientImg[27], clientImg[28]] },
     { items: [clientImg[29]]},
   ];
-  // console.log("da=====", clientData);
 
   return (
     <section className={style.serviceClients}>

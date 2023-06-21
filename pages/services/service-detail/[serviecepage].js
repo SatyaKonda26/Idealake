@@ -27,16 +27,6 @@ export const getStaticPaths = async () => {
   };
 };
 
-// export const getStaticPaths = (context) => {
-//   const id = context.params.serviecepage;
-//   console.log("dsfdfgdgdfg ==>", id);
-//   const servicesDataID = servicesData.filter((service) => service.id == id);
-//   console.log("servicesDataID", servicesDataID);
-
-//   return {
-//     props: { servicesDataID },
-//   };
-// };
 
 export const getStaticProps = async (context) => {
   const id = context.params.serviecepage;
